@@ -22,7 +22,7 @@ h1, h2, h3, h4 {
 .date {
     color: #828282;
 }
-/* 
+
 .save {
     float: right;
 }
@@ -36,7 +36,7 @@ h1, h2, h3, h4 {
     float: right;
     font-size: 26pt;
     margin-right: 20px;
-} */
+} 
 
 .post {
     margin-bottom: 70px;
