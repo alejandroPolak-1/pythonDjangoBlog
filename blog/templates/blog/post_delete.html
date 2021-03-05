@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <form method="POST" class="post-form">{% csrf_token %}
+    <h3>¿Desea eliminar el posteo titulado: <b>{{post.title}}</b>?</h3>
+        <button type="submit" class="btn btn-danger">Si, Borrar</button>
+        <a class="btn btn-primary" href="{% url 'post_detail' pk=post.pk %}">Cancelar</a>
+    </form>
+{% endblock %}

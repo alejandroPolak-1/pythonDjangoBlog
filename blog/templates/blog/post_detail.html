@@ -9,10 +9,13 @@
         {% endif %}
         <h2>{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
-
+     
          {% comment %} verificar que esta autenticado para poder editar un posteo{% endcomment %}
         {% if user.is_authenticated %}
            <a class="btn btn-primary" href="{% url 'post_edit' pk=post.pk %}">Editar</a>
+           <a class="btn btn-danger" href="{% url 'post_delete' pk=post.pk %}">Borrar</a>
+           <a class="btn btn-success" href="{% url 'post_list' %}">Volver al Blog</a>
+           
         {% endif %}
     </div>
 {% endblock %}
